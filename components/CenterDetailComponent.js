@@ -134,7 +134,7 @@ class CenterDetail extends Component {
                     onShow={() => this.toggleModal()}
                 />
                 <RenderComments comments={this.props.comments.comments.filter((comment) => comment.CenterId === CenterId)} />
-                <Modal animationType={'slides'} transparent={false}
+                <Modal animationType={'slide'} transparent={false}
                     visible={this.state.showModal}
                     onDismiss={() => { this.toggleModal(); this.resetForm() }}
                     onRequestClose={() => { this.toggleModal(); this.resetForm() }} >
