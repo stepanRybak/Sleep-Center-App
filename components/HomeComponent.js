@@ -15,7 +15,7 @@ class Home extends Component {
         
         return (
             <View>
-                <Text>This is Home Component</Text>
+                <Text>This is Homes skillet Component</Text>
             </View>
         );
     }
