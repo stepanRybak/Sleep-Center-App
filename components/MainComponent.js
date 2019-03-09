@@ -1,25 +1,43 @@
 import React, { Component } from 'react';
 import Home from './HomeComponent';
-import Menu from './MenuComponent';
+import Locations from './LocationsComponent';
 import ContactUs from './ContactComponent';
 import About from './About';
+import CenterDetail from './CenterDetailComponent';
 import { View, Platform, ScrollView,Text,Image,StyleSheet } from 'react-native';
 import { createStackNavigator, createDrawerNavigator,DrawerItems, SafeAreaView } from 'react-navigation';
 import { Icon } from 'react-native-elements';
+import { connect } from 'react-redux';
+import { fetchDishes, fetchComments, fetchLeaders } from '../redux/ActionCreators';
 
-const MenuNavigator = createStackNavigator({
-    Menu: { screen: Menu,
+
+const mapStateToProps = state => {
+    return {
+      dishes: state.dishes,
+      comments: state.comments,
+      leaders: state.leaders
+    }
+  }
+
+  const mapDispatchToProps = dispatch => ({
+    fetchDishes: () => dispatch(fetchDishes()),
+    fetchComments: () => dispatch(fetchComments()),
+    fetchLeaders: () => dispatch(fetchLeaders()),
+  })
+
+const LocationsNavigator = createStackNavigator({
+    Locations: { screen: Locations,
     navigationOptions: ({navigation}) =>({
         headerLeft : <Icon name='menu' size={24}
         color='white'
         onPress ={ ()=>navigation.toggleDrawer() }/>
     })
-    },
+    },CenterDetail: { screen: CenterDetail}
     
 },
 
     {
-        initialRouteName: 'Menu',
+        initialRouteName: 'Locations',
         navigationOptions: {
             headerStyle: {
                 backgroundColor: "#2758a5"
@@ -134,11 +152,11 @@ const MainNavigator = createDrawerNavigator({
                 )
         }
     },
-    Menu: {
-        screen: MenuNavigator,
+    Locations: {
+        screen: LocationsNavigator,
         navigationOptions: {
-            title: 'Menu',
-            drawerLabel: 'Menu',
+            title: 'Our Locations',
+            drawerLabel: 'Our Locations',
             drawerIcon: ({tintColor, focused}) =>(
                 <Icon 
                     name="list"
@@ -169,6 +187,13 @@ const MainNavigator = createDrawerNavigator({
 
 class Main extends Component {
 
+    componentDidMount() {
+        this.props.fetchLeaders();
+        this.props.fetchComments();
+        this.props.fetchDishes();
+        
+        
+      }
 
     render() {
 
@@ -210,4 +235,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default  Main; 
+export default connect( mapStateToProps, mapDispatchToProps) (Main); 

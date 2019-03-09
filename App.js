@@ -1,15 +1,24 @@
 import React from 'react';
-import { View } from 'react-native';
+import {Provider} from 'react-redux';
+import {ConfigureStore} from './redux/configureStore';
 import Main from './components/MainComponent';
+import {PersistGate} from 'redux-persist/es/integration/react';
+import {Loading} from './components/LoadingComponent';
+
+
+const { persistor,store} = ConfigureStore();
 
 export default class App extends React.Component {
   render() {
     return (
-      
-        <Main/>
+      <Provider store={store}>
+        <PersistGate
+            loading= {<Loading/>}
+            persistor={persistor}>
+            <Main />
+        </PersistGate>
+      </Provider>
       
     );
   }
 }
-
-
