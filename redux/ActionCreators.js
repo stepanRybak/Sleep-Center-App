@@ -53,11 +53,11 @@ export const addComments = (comments) => ({
     payload: comments
 });
 
-export const fetchDishes = () => (dispatch) => {
+export const fetchCenters = () => (dispatch) => {
 
-    dispatch(dishesLoading());
+    dispatch(centersLoading());
 
-    return fetch(baseUrl + 'dishes')
+    return fetch(baseUrl + 'centers')
     .then(response => {
         if (response.ok) {
           return response;
@@ -72,22 +72,22 @@ export const fetchDishes = () => (dispatch) => {
             throw errmess;
       })
     .then(response => response.json())
-    .then(dishes => dispatch(addDishes(dishes)))
-    .catch(error => dispatch(dishesFailed(error.message)));
+    .then(centers => dispatch(addCenters(centers)))
+    .catch(error => dispatch(centersFailed(error.message)));
 };
 
-export const dishesLoading = () => ({
-    type: ActionTypes.DISHES_LOADING
+export const centersLoading = () => ({
+    type: ActionTypes.CENTERS_LOADING
 });
 
-export const dishesFailed = (errmess) => ({
-    type: ActionTypes.DISHES_FAILED,
+export const centersFailed = (errmess) => ({
+    type: ActionTypes.CENTERS_FAILED,
     payload: errmess
 });
 
-export const addDishes = (dishes) => ({
-    type: ActionTypes.ADD_DISHES,
-    payload: dishes
+export const addCenters = (centers) => ({
+    type: ActionTypes.ADD_CENTERS,
+    payload: centers
 });
 
 export const fetchLeaders = () => (dispatch) => {

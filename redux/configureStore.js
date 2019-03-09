@@ -1,7 +1,7 @@
 import {createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
-import { dishes } from './dishes';
+import { centers } from './centers';
 import { comments } from './comments';
 import { leaders } from './leaders';
 import {persistStore, persistCombineReducers} from 'redux-persist';
@@ -16,7 +16,7 @@ const config = {
 export const ConfigureStore = () => {
     const store = createStore(
         persistCombineReducers(config, {
-            dishes,
+            centers,
             comments,
             leaders, 
         }),
