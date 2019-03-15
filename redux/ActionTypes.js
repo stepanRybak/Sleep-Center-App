@@ -7,3 +7,6 @@ export const LEADERS_LOADING = 'LEADERS_LOADING';
 export const ADD_LEADERS = 'ADD_LEADERS';
 export const LEADERS_FAILED = 'LEADERS_FAILED';
 export const ADD_COMMENT = 'ADD_COMMENT';
+export const OPTIONS_LOADING = 'OPTIONS_LOADING';
+export const ADD_OPTIONS = 'ADD_OPTIONS';
+export const OPTIONS_FAILED = 'OPTIONS_FAILED';

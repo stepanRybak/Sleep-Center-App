@@ -126,3 +126,40 @@ export const addLeaders = (leaders) => ({
     type: ActionTypes.ADD_LEADERS,
     payload: leaders
 });
+
+export const fetchOptions = () => (dispatch) => {
+    
+    dispatch(optionsLoading());
+
+    return fetch(baseUrl + 'testOptions')
+    .then(response => {
+        if (response.ok) {
+            return response;
+        } else {
+            var error = new Error('Error ' + response.status + ': ' + response.statusText);
+            error.response = response;
+            throw error;
+        }
+        },
+        error => {
+            var errmess = new Error(error.message);
+            throw errmess;
+        })
+    .then(response => response.json())
+    .then(options => dispatch(addOptions(options)))
+    .catch(error => dispatch(optionsFailed(error.message)));
+};
+
+export const optionsLoading = () => ({
+    type: ActionTypes.OPTIONS_LOADING
+});
+
+export const optionsFailed = (errmess) => ({
+    type: ActionTypes.OPTIONS_FAILED,
+    payload: errmess
+});
+
+export const addOptions = (options) => ({
+    type: ActionTypes.ADD_OPTIONS,
+    payload: options
+});

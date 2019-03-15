@@ -4,6 +4,7 @@ import logger from 'redux-logger';
 import { centers } from './centers';
 import { comments } from './comments';
 import { leaders } from './leaders';
+import {testOptions} from './testOptions';
 import {persistStore, persistCombineReducers} from 'redux-persist';
 import storage from 'redux-persist/es/storage';
 
@@ -19,6 +20,7 @@ export const ConfigureStore = () => {
             centers,
             comments,
             leaders, 
+            testOptions,
         }),
         applyMiddleware(thunk, logger)
     );

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { FlatList } from 'react-native';
+import { FlatList, ScrollView,View } from 'react-native';
 import { Tile } from "react-native-elements";
 import { connect } from 'react-redux';
 import { baseUrl } from '../shared/baseUrl';
 import { Loading } from './LoadingComponent';
-import { ScrollView } from 'react-native-gesture-handler';
+//import { ScrollView,View } from 'react-native-gesture-handler';
 
 const mapStateToProps = state => {
     return {
