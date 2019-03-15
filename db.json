@@ -1,0 +1,374 @@
+{
+    "centers": [
+      {
+        "id": 0,
+        "name": "TG/MB Sleep Centers",
+        "image": "images/TG.png",
+        "category": "mains",
+        "featured": true,
+        "description": "TG/MB Sleep Center include  two branches for pediatric and for adult patients. \nThis is an outpatient facility that located within Tacoma General Hospital where the we care for our most complex cases",
+        "address": "315 Martin Luther King Jr Way \nTacoma, WA 98405 \nScheduling: Mon - Fri, 7am - 8pm \nOvernight hours: Sun - Fri, by appointment \nCall: 253-403-4554"
+
+        
+      },
+      {
+        "id": 1,
+        "name": "Good Samaritan Sleep Center",
+        "image": "images/GS2.png",
+        "category": "Ped/Adult",
+        "featured": false,
+        "description": "Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce",
+        "address": "402 15th Ave. S.E. \nPuyallup, WA 98372 \nScheduling: Mon - Fri, 8am - 4pm \nOvernight hours: Sun - Fri, 6am - 9pm \nCall: 253-697-5250"
+      },
+      {
+        "id": 2,
+        "name": "South Hill Sleep center",
+        "image": "images/south-hill.png",
+        "category": "Adult",
+        "featured": false,
+        "description": "A quintessential ConFusion experience, is it a vada or is it a donut?",
+        "address":"16515 Meridian E. Suite 110B \nPuyallup, WA 98375 \nScheduling: Mon - Fri, 8am - 4pm \nOvernight hours: Sun - Fri, 6am - 9pm \nCall: 253-697-5250"
+      },
+      {
+        "id": 3,
+        "name": "Auburn Sleep center",
+        "image": "images/Auburn.png",
+        "category": "Adult",
+        "featured": false,
+        "description": "A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms",
+        "address":"121 N. Division St. Suite 300 \nAuburn, WA 98001 \nScheduling: Mon - Fri, 8:30am - 2:30pm \nCall: 253-545-2809"
+      }
+    ],
+    "comments": [
+      {
+        "id": 0,
+        "CenterId": 0,
+        "rating": 5,
+        "comment": "Imagine all the eatables, living in conFusion!",
+        "author": "John Lemon",
+        "date": "2012-10-16T17:57:28.556094Z"
+      },
+      {
+        "id": 1,
+        "CenterId": 0,
+        "rating": 4,
+        "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+        "author": "Paul McVites",
+        "date": "2014-09-05T17:57:28.556094Z"
+      },
+      {
+        "id": 2,
+        "CenterId": 0,
+        "rating": 3,
+        "comment": "Eat it, just eat it!",
+        "author": "Michael Jaikishan",
+        "date": "2015-02-13T17:57:28.556094Z"
+      },
+      {
+        "id": 3,
+        "CenterId": 0,
+        "rating": 4,
+        "comment": "Ultimate, Reaching for the stars!",
+        "author": "Ringo Starry",
+        "date": "2013-12-02T17:57:28.556094Z"
+      },
+      {
+        "id": 4,
+        "CenterId": 0,
+        "rating": 2,
+        "comment": "It's your birthday, we're gonna party!",
+        "author": "25 Cent",
+        "date": "2011-12-02T17:57:28.556094Z"
+      },
+      {
+        "id": 5,
+        "CenterId": 1,
+        "rating": 5,
+        "comment": "Imagine all the eatables, living in conFusion!",
+        "author": "John Lemon",
+        "date": "2012-10-16T17:57:28.556094Z"
+      },
+      {
+        "id": 6,
+        "CenterId": 1,
+        "rating": 4,
+        "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+        "author": "Paul McVites",
+        "date": "2014-09-05T17:57:28.556094Z"
+      },
+      {
+        "id": 7,
+        "CenterId": 1,
+        "rating": 3,
+        "comment": "Eat it, just eat it!",
+        "author": "Michael Jaikishan",
+        "date": "2015-02-13T17:57:28.556094Z"
+      },
+      {
+        "id": 8,
+        "CenterId": 1,
+        "rating": 4,
+        "comment": "Ultimate, Reaching for the stars!",
+        "author": "Ringo Starry",
+        "date": "2013-12-02T17:57:28.556094Z"
+      },
+      {
+        "id": 9,
+        "CenterId": 1,
+        "rating": 2,
+        "comment": "It's your birthday, we're gonna party!",
+        "author": "25 Cent",
+        "date": "2011-12-02T17:57:28.556094Z"
+      },
+      {
+        "id": 10,
+        "CenterId": 2,
+        "rating": 5,
+        "comment": "Imagine all the eatables, living in conFusion!",
+        "author": "John Lemon",
+        "date": "2012-10-16T17:57:28.556094Z"
+      },
+      {
+        "id": 11,
+        "CenterId": 2,
+        "rating": 4,
+        "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+        "author": "Paul McVites",
+        "date": "2014-09-05T17:57:28.556094Z"
+      },
+      {
+        "id": 12,
+        "CenterId": 2,
+        "rating": 3,
+        "comment": "Eat it, just eat it!",
+        "author": "Michael Jaikishan",
+        "date": "2015-02-13T17:57:28.556094Z"
+      },
+      {
+        "id": 13,
+        "CenterId": 2,
+        "rating": 4,
+        "comment": "Ultimate, Reaching for the stars!",
+        "author": "Ringo Starry",
+        "date": "2013-12-02T17:57:28.556094Z"
+      },
+      {
+        "id": 14,
+        "CenterId": 2,
+        "rating": 2,
+        "comment": "It's your birthday, we're gonna party!",
+        "author": "25 Cent",
+        "date": "2011-12-02T17:57:28.556094Z"
+      },
+      {
+        "id": 15,
+        "CenterId": 3,
+        "rating": 5,
+        "comment": "Imagine all the eatables, living in conFusion!",
+        "author": "John Lemon",
+        "date": "2012-10-16T17:57:28.556094Z"
+      },
+      {
+        "id": 16,
+        "CenterId": 3,
+        "rating": 4,
+        "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+        "author": "Paul McVites",
+        "date": "2014-09-05T17:57:28.556094Z"
+      },
+      {
+        "id": 17,
+        "CenterId": 3,
+        "rating": 3,
+        "comment": "Eat it, just eat it!",
+        "author": "Michael Jaikishan",
+        "date": "2015-02-13T17:57:28.556094Z"
+      },
+      {
+        "id": 18,
+        "CenterId": 3,
+        "rating": 4,
+        "comment": "Ultimate, Reaching for the stars!",
+        "author": "Ringo Starry",
+        "date": "2013-12-02T17:57:28.556094Z"
+      },
+      {
+        "id": 19,
+        "CenterId": 3,
+        "rating": 2,
+        "comment": "It's your birthday, we're gonna party!",
+        "author": "25 Cent",
+        "date": "2011-12-02T17:57:28.556094Z"
+      }
+    ],
+    "promotions": [
+      {
+        "id": 0,
+        "name": "Weekend Grand Buffet",
+        "image": "images/buffet.png",
+        "label": "New",
+        "price": "19.99",
+        "featured": true,
+        "description": "Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person "
+      }
+    ],
+    "leaders": [
+      {
+        "id": 0,
+        "name": "Uzma Ramzan, MD",
+        "image": "images/alberto.png",
+        "designation": "Sleep Medicine",
+        "abbr": "MD",
+        "featured": false,
+        "description": "Uzma Ramzan, MD, is board certified in Sleep Medicine and specializes in diagnosing and treating sleep-related issues. She evaluates and treats a range of sleep-related disorders, including chronic insomnia, hypersomnias, parasomnias, and restless leg syndrome. Dr. Ramzan began her career in internal medicine and is a member of the American College of Physicians and the American Academy of Sleep. An active volunteer in her community, she supports Habitat for Humanity and dog rescue efforts. She also enjoys Bikram yoga, hiking and gardening in her free time."
+      },
+      {
+        "id": 1,
+        "name": "Diane Acosta, ARNP",
+        "image": "images/alberto.png",
+        "designation": "Nurse Practitioner, Sleep Medicine",
+        "abbr": "ARNP",
+        "featured": false,
+        "description": "Diane Acosta, ARNP, is a board-certified Adult Nurse Practitioner who treats a range of sleep disorders such as sleep apnea, insomnia, restless leg syndrome, night terrors and narcolepsy. She has clinical interests in sleep disorders and sleep disturbances in women."
+      },
+      {
+        "id": 2,
+        "name": "Timothy Murphy, MD",
+        "image": "images/alberto.png",
+        "designation": "Pediatric Pulmonary, Pediatrics, Sleep Medicine",
+        "abbr": "MD",
+        "featured": false,
+        "description": ""
+      },
+      {
+        "id": 3,
+        "name": "Michael Coats, MD",
+        "image": "images/alberto.png",
+        "designation": "Sleep Medicine, Neurosciences",
+        "abbr": "MD",
+        "featured": true,
+        "description": "Michael Coats, M.D., sleep medicine, joined MultiCare Rockwood Clinic in April 2015. He received his undergraduate degree from the University of Nebraska in Lincoln and his medical degree from the University of Nebraska Medical Center in Omaha. Dr. Coats completed residencies in Neurology and Psychiatry as well as a fellowship in Clinical Neurophysiology at the Walter Reed Army Medical Center in Washington DC. He is certified by the American Board of Psychiatry and Neurology and is a Diplomate of the American Board of Sleep Medicine. Dr. Coats is a member of the American Academy of Neurology, the American Academy of Sleep Medicine and the American Psychiatric Association."
+      },
+      {
+        "id": 4,
+        "name": "Nicole Collett, MD",
+        "image": "images/alberto.png",
+        "designation": "Critical Care Medicine, Sleep Medicine, Pulmonary Diseases",
+        "abbr": "MD",
+        "featured": false,
+        "description": "Dr. Collett has critical care and pulmonary expertise in flexible bronchoscopy, interventional bronchoscopy (EBUS), electromagnetic navigational bronchoscopy, cardiopulmonary exercise test, thoracentesis, chest tube placement and management, intubation, ventilator management, central line placement, reading sleep studies, pulmonary function tests, and methacholine challenge tests. In her spare time, Dr. Collett enjoys kayaking, cycling, traveling, and reading."
+      },
+      {
+        "id": 5,
+        "name": "Rasan Spraggins, PA-C",
+        "image": "images/alberto.png",
+        "designation": "Sleep Medicine, Neurosciences",
+        "abbr": "PA-C",
+        "featured": false,
+        "description": ""
+      },
+      {
+        "id": 6,
+        "name": "Edward LeDoux, MD",
+        "image": "images/alberto.png",
+        "designation": "Critical Care Medicine, Sleep Medicine, Pulmonary Diseases",
+        "abbr": "MD",
+        "featured": false,
+        "description": ""
+      },
+      {
+        "id": 7,
+        "name": "Kimberly Mebust, MD",
+        "image": "images/alberto.png",
+        "designation": "Neurology, Sleep Medicine",
+        "abbr": "MD",
+        "featured": false,
+        "description": ""
+      },
+      {
+        "id": 8,
+        "name": "Suzette Gagnon-Bailey, ARNP",
+        "image": "images/alberto.png",
+        "designation": "Nurse Practitioner, Sleep Medicine",
+        "abbr": "ARNP",
+        "featured": false,
+        "description": ""
+      },
+      {
+        "id": 9,
+        "name": "John Rowlands, MD",
+        "image": "images/alberto.png",
+        "designation": "Critical Care Medicine, Sleep Medicine, Pulmonary Diseases",
+        "abbr": "MD",
+        "featured": false,
+        "description": ""
+      },
+      {
+        "id": 10,
+        "name": "David Ricker, MD",
+        "image": "images/alberto.png",
+        "designation": "Pediatric Pulmonary, Pediatrics, Sleep Medicine",
+        "abbr": "MD",
+        "featured": false,
+        "description": ""
+      },
+      {
+        "id": 11,
+        "name": "Arthur Knodel, MD",
+        "image": "images/alberto.png",
+        "designation": "Critical Care Medicine, Sleep Medicine, Pulmonary Diseases",
+        "abbr": "MD",
+        "featured": false,
+        "description": ""
+      },
+      {
+        "id": 12,
+        "name": "Gita Patel, DO",
+        "image": "images/alberto.png",
+        "designation": "",
+        "abbr": "DO",
+        "featured": false,
+        "description": ""
+      },
+      {
+        "id": 13,
+        "name": "Stephen Ryan, MD",
+        "image": "images/alberto.png",
+        "designation": "Critical Care Medicine, Sleep Medicine, Pulmonary Diseases",
+        "abbr": "MD",
+        "featured": false,
+        "description": ""
+      },
+      {
+        "id": 14,
+        "name": "Murali Maheswaran, DO",
+        "image": "images/alberto.png",
+        "designation": "Sleep Medicine",
+        "abbr": "DO",
+        "featured": false,
+        "description": "Murali Maheswaran, DO, specializes in treating sleep-related disorders in adults and children. He is particularly interested in Restless Leg Syndrome, insomnia, Obstructive Sleep Apnea, and Behavioral Sleep Medicine—a non-medication approach to treating sleep disorders which can be effective when used in conjunction with other treatment methods. Dr. Maheswaran is a member of the American Academy of Sleep Medicine and the American Academy of Neurology. In his free time, he enjoys playing sports, spending time with family and rooting for the Seahawks."
+      },
+      {
+        "id": 15,
+        "name": "Ruth Dekker, ARNP",
+        "image": "images/alberto.png",
+        "designation": "Nurse Practitioner, Sleep Medicine",
+        "abbr": "ARNP",
+        "featured": false,
+        "description": ""
+      }
+    ],
+    "feedback": [
+      {
+        "firstname": "fdas",
+        "lastname": "afds",
+        "telnum": "134113",
+        "email": "dafdads@daffas.dfdafd",
+        "agree": true,
+        "contactType": "Email",
+        "message": "afadsfds",
+        "date": "2017-12-04T09:41:49.890Z",
+        "id": 1
+      }
+    ]
+  }
