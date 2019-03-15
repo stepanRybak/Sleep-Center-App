@@ -8,21 +8,23 @@ import { View, Platform, ScrollView,Text,Image,StyleSheet } from 'react-native';
 import { createStackNavigator, createDrawerNavigator,DrawerItems, SafeAreaView } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 import { connect } from 'react-redux';
-import { fetchDishes, fetchComments, fetchLeaders } from '../redux/ActionCreators';
+import { fetchCenters, fetchComments, fetchLeaders, fetchOptions } from '../redux/ActionCreators';
 
 
 const mapStateToProps = state => {
     return {
-      dishes: state.dishes,
+      centers: state.centers,
       comments: state.comments,
-      leaders: state.leaders
+      leaders: state.leaders,
+      testOptions: state.testOptions
     }
   }
 
   const mapDispatchToProps = dispatch => ({
-    fetchDishes: () => dispatch(fetchDishes()),
+    fetchCenters: () => dispatch(fetchCenters()),
     fetchComments: () => dispatch(fetchComments()),
     fetchLeaders: () => dispatch(fetchLeaders()),
+    fetchOptions: ()=> dispatch(fetchOptions())
   })
 
 const LocationsNavigator = createStackNavigator({
@@ -190,7 +192,8 @@ class Main extends Component {
     componentDidMount() {
         this.props.fetchLeaders();
         this.props.fetchComments();
-        this.props.fetchDishes();
+        this.props.fetchCenters();
+        this.props.fetchOptions();
         
         
       }

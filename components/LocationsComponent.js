@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { FlatList } from 'react-native';
+import { FlatList, ScrollView,View } from 'react-native';
 import { Tile } from "react-native-elements";
 import { connect } from 'react-redux';
 import { baseUrl } from '../shared/baseUrl';
 import { Loading } from './LoadingComponent';
-import { ScrollView } from 'react-native-gesture-handler';
+//import { ScrollView,View } from 'react-native-gesture-handler';
 
 const mapStateToProps = state => {
     return {
-        dishes: state.dishes
+        centers: state.centers
     }
 }
 
@@ -36,15 +36,15 @@ class Locations extends Component {
             );
         }
 
-        if (this.props.dishes.isLoading) {
+        if (this.props.centers.isLoading) {
             return (
                 <Loading />
             );
         }
-        else if (this.props.dishes.errMess) {
+        else if (this.props.centers.errMess) {
             return (
                 <View>
-                    <Text>{props.dishes.errMess}</Text>
+                    <Text>{props.centers.errMess}</Text>
                 </View>
             );
         }
@@ -52,7 +52,7 @@ class Locations extends Component {
         else {
             return (
                 <FlatList
-                    data={this.props.dishes.dishes}
+                    data={this.props.centers.centers}
                     renderItem={renderLocationsItem}
                     keyExtractor={item => item.id.toString()}
                 />

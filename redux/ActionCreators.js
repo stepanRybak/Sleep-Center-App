@@ -53,11 +53,11 @@ export const addComments = (comments) => ({
     payload: comments
 });
 
-export const fetchDishes = () => (dispatch) => {
+export const fetchCenters = () => (dispatch) => {
 
-    dispatch(dishesLoading());
+    dispatch(centersLoading());
 
-    return fetch(baseUrl + 'dishes')
+    return fetch(baseUrl + 'centers')
     .then(response => {
         if (response.ok) {
           return response;
@@ -72,22 +72,22 @@ export const fetchDishes = () => (dispatch) => {
             throw errmess;
       })
     .then(response => response.json())
-    .then(dishes => dispatch(addDishes(dishes)))
-    .catch(error => dispatch(dishesFailed(error.message)));
+    .then(centers => dispatch(addCenters(centers)))
+    .catch(error => dispatch(centersFailed(error.message)));
 };
 
-export const dishesLoading = () => ({
-    type: ActionTypes.DISHES_LOADING
+export const centersLoading = () => ({
+    type: ActionTypes.CENTERS_LOADING
 });
 
-export const dishesFailed = (errmess) => ({
-    type: ActionTypes.DISHES_FAILED,
+export const centersFailed = (errmess) => ({
+    type: ActionTypes.CENTERS_FAILED,
     payload: errmess
 });
 
-export const addDishes = (dishes) => ({
-    type: ActionTypes.ADD_DISHES,
-    payload: dishes
+export const addCenters = (centers) => ({
+    type: ActionTypes.ADD_CENTERS,
+    payload: centers
 });
 
 export const fetchLeaders = () => (dispatch) => {
@@ -125,4 +125,41 @@ export const leadersFailed = (errmess) => ({
 export const addLeaders = (leaders) => ({
     type: ActionTypes.ADD_LEADERS,
     payload: leaders
+});
+
+export const fetchOptions = () => (dispatch) => {
+    
+    dispatch(optionsLoading());
+
+    return fetch(baseUrl + 'testOptions')
+    .then(response => {
+        if (response.ok) {
+            return response;
+        } else {
+            var error = new Error('Error ' + response.status + ': ' + response.statusText);
+            error.response = response;
+            throw error;
+        }
+        },
+        error => {
+            var errmess = new Error(error.message);
+            throw errmess;
+        })
+    .then(response => response.json())
+    .then(options => dispatch(addOptions(options)))
+    .catch(error => dispatch(optionsFailed(error.message)));
+};
+
+export const optionsLoading = () => ({
+    type: ActionTypes.OPTIONS_LOADING
+});
+
+export const optionsFailed = (errmess) => ({
+    type: ActionTypes.OPTIONS_FAILED,
+    payload: errmess
+});
+
+export const addOptions = (options) => ({
+    type: ActionTypes.ADD_OPTIONS,
+    payload: options
 });

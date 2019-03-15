@@ -8,7 +8,7 @@ import {postComment} from '../redux/ActionCreators';
 
 const mapStateToProps = state => {
     return {
-        dishes: state.dishes,
+        centers: state.centers,
         comments: state.comments,
     }
 }
@@ -27,7 +27,7 @@ function RenderComments(props) {
              <Rating
                     imageSize={20}
                     readonly
-                    startingValue={item.rating} ></Rating>
+                    startingValue={+item.rating} ></Rating>
                 <Text style={{ fontSize: 14 }}>{item.comment}</Text>
                
                 <Text style={{ fontSize: 12 }}>{'-- ' + item.author + ', ' + item.date}</Text>
@@ -52,19 +52,19 @@ function RenderComments(props) {
 
 function RenderCenter(props) {
 
-    const dish = props.dish;
+    const center = props.center;
 
 
-    if (dish != null) {
+    if (center != null) {
         return (
             <ScrollView>
                 <Card
-                    featuredTitle={dish.name}
-                    image={{ uri: baseUrl + dish.image }}>
+                    featuredTitle={center.name}
+                    image={{ uri: baseUrl + center.image }}>
                     <Text >
-                        {dish.description}
+                        {center.description}
                     </Text>
-                    <Text style={{ margin: 10 }}>{dish.address}</Text>
+                    <Text style={{ margin: 10 }}>{center.address}</Text>
                     <View style={styles.formRow}>
                         <Icon style={styles.formItem}
                             raised
@@ -111,7 +111,7 @@ class CenterDetail extends Component {
         this.setState({
             author: '',
             comment: '',
-            rating: 1,
+            rating: 3,
             showModal: false
         });
     }
@@ -130,17 +130,17 @@ class CenterDetail extends Component {
         const CenterId = this.props.navigation.getParam('CenterId', '');
         return (
             <ScrollView>
-                <RenderCenter dish={this.props.dishes.dishes[+CenterId]}
+                <RenderCenter center={this.props.centers.centers[+CenterId]}
                     onShow={() => this.toggleModal()}
                 />
                 <RenderComments comments={this.props.comments.comments.filter((comment) => comment.CenterId === CenterId)} />
-                <Modal animationType={'slides'} transparent={false}
+                <Modal animationType={'slide'} transparent={false}
                     visible={this.state.showModal}
                     onDismiss={() => { this.toggleModal(); this.resetForm() }}
                     onRequestClose={() => { this.toggleModal(); this.resetForm() }} >
                     <View style={styles.modal}>
-                        <Text style={styles.modalTitle}>Please Leave Your Comment</Text>
-                        <Rating showRating fractions="{1}" startingValue="{3}"
+                        <Text style={styles.modalTitle}>Please Leave Your Review</Text>
+                        <Rating showRating fractions={0} startingValue={this.state.rating}
                             onFinishRating={(value) => this.setState({ rating: value })}
                         />
                         <Input
@@ -165,7 +165,7 @@ class CenterDetail extends Component {
                         <Button
                             onPress={() => { this.toggleModal(); this.resetForm() }}
 
-                            color="#512DA8"
+                            color="black"
                             title="Close"
                         />
                     </View>
@@ -200,7 +200,7 @@ const styles = StyleSheet.create({
     modalTitle: {
         fontSize: 20,
         fontWeight: 'bold',
-        backgroundColor: '#512DA8',
+        backgroundColor: '#2758a5',
         textAlign: 'center',
         color: 'white',
         marginBottom: 20
