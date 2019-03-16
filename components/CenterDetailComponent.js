@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Text, View, ScrollView, FlatList, Modal, StyleSheet, Button} from 'react-native';
+import { Text, View, ScrollView, FlatList, Modal, StyleSheet,Button } from 'react-native';
 import { Card, Icon, Rating, Input } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { baseUrl } from '../shared/baseUrl';
-import {postComment} from '../redux/ActionCreators';
+import { postComment } from '../redux/ActionCreators';
 
 
 const mapStateToProps = state => {
@@ -14,7 +14,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
-    postComment: (CenterId,author,comment, rating) => dispatch(postComment(CenterId,author,comment, rating))
+    postComment: (CenterId, author, comment, rating) => dispatch(postComment(CenterId, author, comment, rating))
 })
 
 function RenderComments(props) {
@@ -24,12 +24,12 @@ function RenderComments(props) {
     const renderCommentItem = ({ item, index }) => {
         return (
             <View key={index} style={{ margin: 10 }} >
-             <Rating
+                <Rating
                     imageSize={20}
                     readonly
                     startingValue={+item.rating} ></Rating>
                 <Text style={{ fontSize: 14 }}>{item.comment}</Text>
-               
+
                 <Text style={{ fontSize: 12 }}>{'-- ' + item.author + ', ' + item.date}</Text>
 
 
@@ -65,6 +65,7 @@ function RenderCenter(props) {
                         {center.description}
                     </Text>
                     <Text style={{ margin: 10 }}>{center.address}</Text>
+                    <Text style={{fontWeight:'bold'}}>Please fill out Sleep Questionnaire  and/or leave your review below:</Text>
                     <View style={styles.formRow}>
                         <Icon style={styles.formItem}
                             raised
@@ -74,6 +75,15 @@ function RenderCenter(props) {
                             color='#512DA8'
                             onPress={() => props.onShow()}
                         />
+                      
+                        <Icon style={styles.formItem}
+                            raised
+                            reverse
+                            name="tasks"
+                            type='font-awesome'            
+                            onPress={() => props.onShow()}
+                        />
+                         
                     </View>
                 </Card>
             </ScrollView>
@@ -104,7 +114,7 @@ class CenterDetail extends Component {
     handleComments(CenterId) {
         console.log(JSON.stringify(this.state));
         this.toggleModal();
-        this.props.postComment(CenterId,this.state.author,this.state.comment,this.state.rating);
+        this.props.postComment(CenterId, this.state.author, this.state.comment, this.state.rating);
     }
 
     resetForm() {
@@ -154,11 +164,11 @@ class CenterDetail extends Component {
                             onChangeText={(value) => this.setState({ comment: value })}
                         />
 
-                        <Button style={{backgroundColor: 'red'}} textStyle={{fontSize: 18}}
+                        <Button style={{ backgroundColor: 'red' }} textStyle={{ fontSize: 18 }}
                             onPress={() => this.handleComments(CenterId)}
                             //onSubmit={(values) => this.handleSubmit(values)}
                             raised
-                            
+
                             bacgroundcolor="#512DA8"
                             title="Submit"
                         />
@@ -177,21 +187,21 @@ class CenterDetail extends Component {
 }
 
 const styles = StyleSheet.create({
-    formRow:{
+    formRow: {
         alignItems: 'center',
-        justifyContent:'center',
-        flex:1,
+        justifyContent: 'center',
+        flex: 1,
         flexDirection: 'row',
-        margin:20
+        margin: 20
     },
 
-    formLabel:{
-        fontSize:18,
-        flex:2
+    formLabel: {
+        fontSize: 18,
+        flex: 2
     },
 
     formItem: {
-        flex:1
+        flex: 1
     },
     modal: {
         justifyContent: 'center',
@@ -215,7 +225,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#DDDDDD',
         padding: 10
-      },
+    },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CenterDetail);

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { FlatList, ScrollView, Text } from 'react-native';
-import { ListItem, Card } from 'react-native-elements';
+import { FlatList, ScrollView, Text, View } from 'react-native';
+import { ListItem, Card, Image } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { baseUrl } from '../shared/baseUrl';
 import { Loading } from './LoadingComponent';
@@ -25,12 +25,31 @@ class About extends Component {
         const renderLeader = ({item, index}) => {
 
             return (
+                <Card>
+                    <View  style={{
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                    }}>
+                    <Image
+                        source={{uri: baseUrl + item.image}}
+                        style={{ width: 100, height: 100 }}
+                        //PlaceholderContent={<ActivityIndicator />}
+                        />
+                    </View>
                 <ListItem
                     key={index}
-                    title={item.name}
+                    title={
+                        <Text style={{
+                            fontSize: 20,
+                            fontWeight: 'bold',
+                        }}>
+                            {item.name}
+                        </Text>
+                    }
                     subtitle={item.description}
-                    leftAvatar={{source: {uri: baseUrl + item.image}}}
+                    //leftAvatar={{source: {uri: baseUrl + item.image}}}
                     />
+                </Card>
             );
         };
 
@@ -38,7 +57,7 @@ class About extends Component {
             return(
                 <ScrollView>
                     <Card
-                        title='Corporate Leadership'>
+                        title='Sleep Medicine Providers'>
                         <Loading />
                     </Card>
                 </ScrollView>
@@ -49,7 +68,7 @@ class About extends Component {
                 <ScrollView>
                     <Animatable.View animation="fadeInDown" duration={2000} delay={1000}>
                         <Card
-                            title='Corporate Leadership'>
+                            title='Sleep Medicine Providers'>
                         <Text>{this.props.leaders.errMess}</Text>
                         </Card>
                     </Animatable.View>
@@ -61,7 +80,7 @@ class About extends Component {
                 <ScrollView>
                     <Animatable.View animation="fadeInDown" duration={2000} delay={1000}>
                         <Card
-                            title='Corporate Leadership'>
+                            title='Sleep Medicine Providers'>
                         <FlatList 
                             data={this.props.leaders.leaders}
                             renderItem={renderLeader}

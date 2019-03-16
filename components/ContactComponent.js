@@ -19,13 +19,14 @@ class ContactUs extends Component {
             
                 <Card
                     title='Contact Information'>
+                    <Text style={{fontWeight:'bold',  margin: 10}}>Tacoma Sleep Center</Text>
                     <Text style={{ margin: 10 }}>
-                        121, Clear Water Bay Road{"\n"}{"\n"}
-                        Clear Water Bay, Kowloon{"\n"}{"\n"}
+                    315 Martin Luther King Jr Way{"\n"}{"\n"}
+                    Tacoma, WA 98405{"\n"}{"\n"}
                         HONG KONG{"\n"}{"\n"}
-                        Tel: +852 1234 5678{"\n"}{"\n"}
-                        Fax: +852 8765 4321{"\n"}{"\n"}
-                        Email:confusion@food.net
+                        Tel: +253-403-4554{"\n"}{"\n"}
+                        Fax: +253-403-4554{"\n"}{"\n"}
+                
                      </Text>
                 </Card>
             

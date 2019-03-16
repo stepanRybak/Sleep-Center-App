@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FlatList, ScrollView,View } from 'react-native';
+import { FlatList, ScrollView,View, Text } from 'react-native';
 import { Tile } from "react-native-elements";
 import { connect } from 'react-redux';
 import { baseUrl } from '../shared/baseUrl';
@@ -24,10 +24,10 @@ class Locations extends Component {
         const renderLocationsItem = ({ item, index }) => {
             return (
                 <ScrollView>
-                    <Tile
+                    <Tile style={{opacity: 1.0}}
                         key={index}
                         title={item.name}
-                        caption={item.description}
+                        caption={item.description} 
                         featured
                         onPress={() => navigate('CenterDetail', { CenterId: item.id })}
                         imageSrc={{ uri: baseUrl + item.image }}
