@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, ScrollView, FlatList, View, Image,StyleSheet } from 'react-native';
+import { Text, ScrollView, FlatList, View, Image,StyleSheet, ImageBackground } from 'react-native';
 import { Card, ListItem } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { Loading } from './LoadingComponent';
@@ -78,20 +78,17 @@ class Home extends Component {
         }
         else{
             return (
-                <ScrollView>
-                    <Card title='Neuroscience and Sleep Medicine'>
-                    
-                        <View style={styles.CardContainer}>
-                        <Text></Text>
+                ///<ImageBackground style={{width: '100%', height: '100%'}} source={require('./images/TG.png')}></ImageBackground>//
+                <ScrollView style={{backgroundColor:'#9bbce8'}}>
+                    <Card title='Neuroscience and Sleep Medicine' >
+                        <View style={styles.CardContainer} >
                             <Image  style={styles.image} source={require('./images/Acrcredited.png')} />
-    
                             <Text style={{ margin: 10 }}>
                                 MultiCare Sleep Medicine serving out community in Pierce and King counties.Our Centers staffed by board certified physicians and registered technologists, who conduct a variety of sleep studies to diagnose and treat all sleep disorders.
                             </Text>
                         </View>
-                        
-                        <Animatable.View animation="fadeInUp" duration={1000} delay={300}>
-                        <FlatList
+                        <Animatable.View animation="fadeInUp" duration={1000} delay={300} >
+                        <FlatList 
                             data={this.props.testOptions.testOptions}
                             renderItem={renderTestOptionsItem}
                             keyExtractor={item => item.id.toString()}
@@ -112,6 +109,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         marginLeft: 30,
         marginRight: 30,
+        backgroundColor:'#9bbce8',
         
         justifyContent: 'center',
         
@@ -122,7 +120,11 @@ const styles = StyleSheet.create({
         width: 80,
         height: 100
        
-    }
+    },
+    backgroundImage: {
+        flex: 1,
+        resizeMode:  'stretch'
+      }
         
 });
 

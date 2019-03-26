@@ -23,7 +23,6 @@ class ContactUs extends Component {
                     <Text style={{ margin: 10 }}>
                     315 Martin Luther King Jr Way{"\n"}{"\n"}
                     Tacoma, WA 98405{"\n"}{"\n"}
-                        HONG KONG{"\n"}{"\n"}
                         Tel: +253-403-4554{"\n"}{"\n"}
                         Fax: +253-403-4554{"\n"}{"\n"}
                 
